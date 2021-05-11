@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>lemonCat</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.2.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.2.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.2.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.2.1/firebase-firestore.js"></script>
+    <script defer src="./firebase-init.js"></script>
+    <script defer src="./script/home.js"></script>
+    <script defer src="./script/activity.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="user.css">
+    
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+  </head>
+  <body onload="homeLoad()">
+      <div style="width: 100%; margin-top: 40px; margin-bottom: 20px;">
+        <table style="width: 100%; padding-left: 5%; padding-right: 5%;">
+          <tr>
+            <td style="width: 70px;">
+              <div style="border-radius: 5px; width: 50px; height: 50px; background-color: black;">
+                <img src="./pics/caticon.png" style="width: 50px; height: 50px; filter: invert();">
+              </div>
+            </td>
+            <td>
+              <div class="myname" id="displayname">lemonCat</div>
+            </td>
+            <td style="width: 100px;">
+              <button class="button-can-hover" id="status-button"></button>
+            </td> 
+          </tr>
+        </table>
+      </div>
+      <hr style="border-color: rgb(179, 179, 179); border-style: solid; border-width: 0.5px;">
+      <div class="user-display" id="user-display" "></div><br><br>
+      <div class="display">
+        <div class="reg">lemonCat (beta)</div>
+        <br><br>
+
+        <div class="title">Public session</div>
+        <hr style="border-color: rgb(179, 179, 179); border-style: solid; border-width: 0.5px;">
+        <br><br><br><br>
+        <div class="html-output" id="html-output"></div>
+        <br><br><br><br><br><br>
+        <hr style="border-color: rgb(179, 179, 179); border-style: solid; border-width: 0.5px;">
+        <div class="user-display" id="editor"></div>
+        <br><div class="title">Edit</div><br>
+        <textarea name="html-input" id="html-input" class="html-input" placeholder="Type something" cols="74" rows="20"></textarea><br>
+        <button class="button-can-hover" id="upload-html" onclick="convertToHTML(document.getElementById('html-input').value)">update</button>
+      </div>
+
+      
+  </body>
+</html>

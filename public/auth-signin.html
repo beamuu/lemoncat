@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign in</title>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.2.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.2.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.2.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.2.1/firebase-firestore.js"></script>
+    <script defer src="./firebase-init.js"></script>
+    <script defer src="./script/auth.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+  </head>
+  <body style="text-align: center;">
+      <div class="myname" style="text-align: center; width: 100%; margin-top: 90px; font-size: 200%; margin-bottom: 60px;">LemonCat</div>
+      <div></div>
+      <input placeholder="email" id="email" type="text" class="input" style="height: 30px; width: 300px;"><br><br>
+      <input placeholder="password" id="password" type="password" class="input" style="height: 30px; width: 300px;"><br><br><br>
+      <a class="reg" href='./index.html'">continue as guest</a><br><br>
+      <a class="reg" href='./auth-signup.html'">or sign up new account</a><br><br>
+      <button class="button-can-hover" onclick="signIn(document.getElementById('email').value , document.getElementById('password').value)">sign in</button><br><br>
+      <div class="lds-ellipsis" id="loading"><div></div><div></div><div></div><div></div></div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+.text {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 100%;
+    white-space: pre;
+    display: inline-block;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.link {
+    color: rgb(25, 1, 236);
+    font-family: Helvetica;
+    font-size: 100%;
+    white-space: pre;
+    display: inline-block;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.text-bold {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 100%;
+    font-weight: bold;
+    white-space: pre;
+    display: inline-block;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.title {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica;
+    font-size: 200%;
+    font-weight: bold;
+    white-space: pre;
+    display: inline-block;
+    word-wrap: break-word;
+    word-break: break-all;
+}
